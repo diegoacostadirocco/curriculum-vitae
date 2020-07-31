@@ -1,0 +1,10 @@
+.footer {
+    bottom: 5px;
+    right: 5px;
+}
+.pieDePagina{
+    padding: 10px;
+}
+.listOfUsed {
+    list-style: none;
+}

@@ -1,0 +1,14 @@
+.root {
+    height: 380;
+    transform: translateZ(0px);
+    flexGrow: 1;
+    -webkit-transform: translateZ(0px);
+    -moz-transform: translateZ(0px);
+    -ms-transform: translateZ(0px);
+    -o-transform: translateZ(0px);
+}
+.speedDial {
+    position: absolute;
+    bottom: spacing(2);
+    right: spacing(2);
+  }

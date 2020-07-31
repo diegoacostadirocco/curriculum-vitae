@@ -1,0 +1,16 @@
+
+.exampleCV {
+ background-color: beige;
+ font-family: 'Roboto', sans-serif;
+ font-size: 28px;
+ line-height: normal;
+}
+.app{
+    background-image: url('../A-GOOD-RESUME-IS-THE-KEY-TO-SUCCESS-DURING-JOB-HUNTING.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-color: #cccccc;
+    background-position: center;
+    height: 100%;
+
+}

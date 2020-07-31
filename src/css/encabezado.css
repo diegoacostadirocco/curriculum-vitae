@@ -1,0 +1,31 @@
+ /* .encabezado {
+    border: 1px solid red;
+    width: 100%;
+    
+} */
+/* .foto-header{
+width: 50%;
+    border-radius: 5px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+} */
+.titulo {
+    margin: 5px;
+    padding: 5px;
+    text-align: center; 
+} 
+.piedepaginatop{
+    padding: 5px;
+    text-align: right;
+    text-decoration: underline;
+    line-height: normal;
+}
+.sumario p {
+    font-size: 20px;
+    font-style: italic;
+}
+.sumario header {
+    text-decoration: underline;
+}

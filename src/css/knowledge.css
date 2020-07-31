@@ -1,0 +1,12 @@
+.knowledge {
+    padding: 5px;
+}
+.skill {
+    padding: 5px;
+}
+.skill span {
+    font-style: italic;
+}
+.skill p {
+    text-decoration: underline;
+}
