@@ -1,4 +1,18 @@
-.index-page {
+.indexPage {
     text-align: center;
+    font-size: 28px;
+    line-height: normal;
+    background-color: beige;
     
+}
+.footer-sign{
+        background-color: #212121;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 15px 0;
+        color: white;
+}
+.footer-sign a {
+    color: white;
 }

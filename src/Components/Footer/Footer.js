@@ -12,9 +12,9 @@ const Footer = () => {
                 <Grid item xs>
                     <Contacto />
                 </Grid>
-                <Grid item xs className="pieDePagina">
+                {/* <Grid item xs className="pieDePagina">
                     <PieDePagina />
-                </Grid>
+                </Grid> */}
             </Grid>
         </div>
     );

@@ -12,9 +12,9 @@ const Contacto = () => {
 
     return (
         <div className="contacto">
-            <span>Reach me at:</span>
-            <Grid container spacing={2}
-                    direction="column">
+            <span></span>
+            <Grid container spacing={1}
+                    direction="row">
                 <Grid item xs>
                     <Paper elevation={2} className="linksDeContacto">
                         <a href={`mailto: ${example.persona.mail}`}>

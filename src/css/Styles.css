@@ -8,9 +8,9 @@
 .app{
     background-image: url('../A-GOOD-RESUME-IS-THE-KEY-TO-SUCCESS-DURING-JOB-HUNTING.jpg');
     background-repeat: no-repeat;
-    background-size: cover; 
     background-color: #cccccc;
     background-position: center;
+    background-size: 100%; 
     height: 100%;
 
 }
