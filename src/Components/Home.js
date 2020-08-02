@@ -11,7 +11,7 @@ const Home = () => {
                 <h1 style={{textAlign:"center"}}> Esto es HURRAY!</h1>
                 <div class="ui brown message">
                     En la pagina siguiente te dejo mi Curriculum personal para que te sirva de ejemplo.
-                    En la plantilla CREATE RESUME podras llenar con tus datos y disfrutar de tu propio CV.
+                    En la plantilla CREA TU CV podras llenar con tus datos y disfrutar de tu propio CV.
                     Buscas trabajo? Hurray!
                 </div>
                 <br/>

@@ -39,7 +39,7 @@ class FormSheetContacto extends Component {
                                 maxLength="15" />
                     </div>
                     <div className="field">
-                        <label>www.linkedin.com/</label>
+                        <label>Linkedin</label>
                         <input type="text" name="linkedIn"
                             placeholder=" ESCRIBE SOLO TU PERFIL"
                             value={this.state.linkedIn}

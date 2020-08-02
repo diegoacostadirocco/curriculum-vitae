@@ -16,7 +16,7 @@ const CreateResumeForm = () => {
 
     return (
     <div className="ui container new-resume-form">
-        <h1 style={{textAlign:"center"}}>CREATE YOUR RESUME.</h1>
+        <h1 style={{textAlign:"center"}}>CREA TU CV.</h1>
         <br/>
         <form onSubmit={handleSubmit} className="ui equal width form">
             <FormSheetHeader />
@@ -30,7 +30,7 @@ const CreateResumeForm = () => {
             {/* <FormSheetQuote /> */}
             {/* <br/> */}
             <FormSheetContacto />
-            <button className="ui primary button" type="submit">Submit</button>
+            <button className="ui primary button" type="submit">Guardar</button>
             <button className="ui button">Cancelar</button>
         </form>
     </div>

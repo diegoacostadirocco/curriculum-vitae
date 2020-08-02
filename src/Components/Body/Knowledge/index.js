@@ -21,8 +21,8 @@ const Knowledge = () => {
                         <br/>
                         <span>{`${objMapped.seminary}`}</span>
                         <br/>
-                        AT <p>{`${objMapped.school}`}</p>
-                         RATE:   
+                        en <p>{`${objMapped.school}`}</p>
+                         Nivel de manejo:   
                         <Rating name="read-only" value={objMapped.stars} readOnly />
                     </div>
                 </Paper>

@@ -47,7 +47,7 @@ class FormSheetJobs extends React.Component {
                                onChange={this.handleLastDateChange}
                                />
                     </div>
-                    <button className="ui button">Add Trabajo</button>
+                    <button className="ui button">Agregar Trabajo</button>
                 </div>
             </div>
         );

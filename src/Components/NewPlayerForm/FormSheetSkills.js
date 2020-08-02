@@ -39,14 +39,14 @@ class FormSheetSkills extends React.Component {
                             maxLength="30" />
                     </div>
                     <div className="field">
-                        <label>Nivel (1 al 5)</label>
+                        <label>Nivel de manejo</label>
                         <input type="number" 
                             placeholder="1=JR, 5=MASTER"
                             value={this.state.stars}
                             onChange={this.handleStarsChange}
                             maxLength="1" />
                     </div>
-                    <button className="ui button">Add skill</button>
+                    <button className="ui button">agregar skill</button>
                 </div>
             </div>
         );

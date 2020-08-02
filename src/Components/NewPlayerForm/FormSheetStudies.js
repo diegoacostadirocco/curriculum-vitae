@@ -38,7 +38,7 @@ class FormSheetStudies extends React.Component{
                            onChange={this.handleCollegeChange}
                            maxLength="20" />
                 </div>
-                <button className="ui button">Add Estudio</button>
+                <button className="ui button">Agregar Estudio</button>
             </div>
         </div>
     );
