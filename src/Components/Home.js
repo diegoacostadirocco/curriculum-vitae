@@ -8,7 +8,7 @@ const Home = () => {
         <div>
             <div className="ui container new-resume-form">
                 <h3 class="ui block header">Haz tu Curriculum en 1 solo paso</h3>
-                <h1 style={{textAlign:"center"}}>HURRAY!</h1>
+                <h1 style={{textAlign:"center"}}> Esto es HURRAY!</h1>
                 <div class="ui brown message">
                     En la pagina siguiente te dejo mi Curriculum personal para que te sirva de ejemplo.
                     En la plantilla CREATE RESUME podras llenar con tus datos y disfrutar de tu propio CV.

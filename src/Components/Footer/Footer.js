@@ -2,7 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Contacto from './Contacto';
 import './../../css/footer.css';
-import PieDePagina from './PieDePagina';
+// import PieDePagina from './PieDePagina';
 
 const Footer = () => {
     return (
