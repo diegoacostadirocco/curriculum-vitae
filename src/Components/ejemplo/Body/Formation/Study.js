@@ -1,5 +1,5 @@
 import React from 'react';
-import { example } from '../../DataCV';
+import { example } from '../../../DataCV';
 
 const Study = () => {
     const listOfEstudios= example.persona.estudios.map(

@@ -2,10 +2,10 @@ import React from 'react';
 import { FiMail } from 'react-icons/fi';
 import { FcCallback } from 'react-icons/fc';
 import { FaLinkedin } from 'react-icons/fa';
-import { example } from '../DataCV';
+import { example } from '../../DataCV';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import './../../css/Contacto.css';
+import './../../../css/Contacto.css';
 import PropTypes from 'prop-types';
 
 const Contacto = () => {

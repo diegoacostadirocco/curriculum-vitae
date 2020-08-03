@@ -1,21 +1,20 @@
-import './../../../css/knowledge.css';
+import './../../../../css/knowledge.css';
 import React from 'react';
 import Rating from '@material-ui/lab/Rating';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { example } from '../../DataCV';
+import { example } from '../../../DataCV';
 
 
 
 const Knowledge = () => {
     const listOfExpertise = example.persona.expertise.map(
         (objMapped) => 
-            <Grid item xs>
+            <Grid item xs key={`${objMapped.skill}
+            _${objMapped.seminary}_${objMapped.school}
+            _${objMapped.stars}`}>
                 <Paper elevation={5}>
                     <div 
-                        key={`${objMapped.skill}
-                            _${objMapped.seminary}_${objMapped.school}
-                            _${objMapped.stars}`}
                         className="skill" >
                         <b>{`${objMapped.skill}`}</b>
                         <br/>

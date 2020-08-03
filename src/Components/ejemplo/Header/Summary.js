@@ -1,6 +1,6 @@
 import React from 'react';
-import { example } from '../DataCV';
-import './../../css/encabezado.css';
+import { example } from '../../DataCV';
+import './../../../css/encabezado.css';
 const Summary = () => {
     return (
         <div className="sumario">

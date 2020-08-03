@@ -3,18 +3,18 @@ import { Link }from 'react-router-dom';
 import './../css/home.css';
 
 const Nav = () => {
-    return (
     
-        <div className="ui inverted massive menu">
-            <Link to="/">
-                <li className="active item">Inicio</li>
+    return (
+        <div className="ui three inverted item menu">
+            <Link to="/" className="blue item">
+                <a href='./Home.js'>Inicio</a>
             </Link>
-            <Link to="/example-resume">
-                <li className="item">Ejemplo</li>
+            <Link to="/example-resume" className="teal item"> 
+                <a href="./ExampleCV.js">Ejemplo</a>
             </Link>
-            <Link to="/create-resume">
-                <li className="item">Crea tu CV</li>
-            </Link>
+            <Link to="/create-resume" className="olive item"> 
+                <a href="./CreateResumeForm.js">Crea tu CV</a>
+            </Link> 
         </div>
     );
 };

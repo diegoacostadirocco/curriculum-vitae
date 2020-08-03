@@ -1,8 +1,8 @@
-import './../../css/encabezado.css';
+import './../../../css/encabezado.css';
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Paper } from '@material-ui/core';
-import { example } from './../DataCV';
+import { example } from './../../DataCV';
 import image from './fotominicv.jpg';
 import Summary from './Summary';
 

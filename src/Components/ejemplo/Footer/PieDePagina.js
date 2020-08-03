@@ -2,13 +2,13 @@ import React from 'react';
 import { GrReactjs, GrCss3 } from 'react-icons/gr';
 import { FaReact } from 'react-icons/fa';
 import { MdRouter } from 'react-icons/md';
-import './../../css/footer.css';
-import Icon from './../../icons/material_ui_icon_137419 (1).ico';
+import './../../../css/footer.css';
+import Icon from './../../../icons/material_ui_icon_137419 (1).ico';
 
 const PieDePagina = () => {
     return(
         <div>
-            <h2 class="ui dividing header">
+            <h2 className="ui dividing header">
                 Esta app se creo con las siguientes herramientas:</h2>
             <ul className="listOfUsed">
                 <li><GrCss3/> CSS3</li>
