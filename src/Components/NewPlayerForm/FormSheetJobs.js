@@ -45,6 +45,7 @@ class FormSheetJobs extends React.Component {
                                placeholder="¿Hasta cuando?"
                                value={this.state.lastDate}
                                onChange={this.handleLastDateChange}
+                               className="number-input"
                                />
                     </div>
                     <button className="ui button">Agregar Trabajo</button>

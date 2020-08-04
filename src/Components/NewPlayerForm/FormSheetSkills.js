@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../css/newResumeForm.css'
 
 class FormSheetSkills extends React.Component {
     constructor(props){
@@ -44,7 +45,9 @@ class FormSheetSkills extends React.Component {
                             placeholder="1=JR, 5=MASTER"
                             value={this.state.stars}
                             onChange={this.handleStarsChange}
-                            maxLength="1" />
+                            min="1"
+                            max="5"
+                            className="number-input" />
                     </div>
                     <button className="ui button">agregar skill</button>
                 </div>

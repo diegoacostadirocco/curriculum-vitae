@@ -5,15 +5,15 @@ import './../css/home.css';
 const Nav = () => {
     
     return (
-        <div className="ui three inverted item menu">
+        <div id="nav-list" className="ui three inverted item menu">
             <Link to="/" className="blue item">
-                <a href='./Home.js'>Inicio</a>
+                <li href='./Home.js'>Inicio</li>
             </Link>
             <Link to="/example-resume" className="teal item"> 
-                <a href="./ExampleCV.js">Ejemplo</a>
+                <li href="./ExampleCV.js">Ejemplo</li>
             </Link>
             <Link to="/create-resume" className="olive item"> 
-                <a href="./CreateResumeForm.js">Crea tu CV</a>
+                <li href="./CreateResumeForm.js">Crea tu CV</li>
             </Link> 
         </div>
     );
