@@ -77,36 +77,36 @@ export const example = {
         ],  
     }, 
 }
-export const userList = [
-    {
-        sumario:"",
-        name: "",
-        job: "",
-        mail: "",
-        phone: "",
-        linkedIn: ``,
+export const userList = {
+    user :{
+        sumario:"este es el CV de pepito",
+        name: "pepito lopez",
+        job: "pepitea",
+        mail: "pepi@to.com",
+        phone: "1234567890",
+        linkedIn: `www.linkedin.com/in/pepito`,
         trabajos: [
                 {
-                workPost: "",
-                company: "",
-                endDate:0,
+                workPost: "pepitea",
+                company: "pepitopolis",
                 },
         ],
         estudios:[
                 {
-                    title: "",
-                    college: "",
+                    title: "ingeniero ",
+                    college: "UPA",
                 },
             
         ],
         expertise: [
             { 
-                skill: "",
-                seminary: '""',
-                stars:0,
+                skill: "pep",
+                seminary: '"it"',
+                school:"o",
+                stars:5,
             },
            
         
         ],  
     }, 
-]
+}

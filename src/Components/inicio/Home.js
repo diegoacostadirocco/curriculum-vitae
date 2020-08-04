@@ -3,7 +3,6 @@ import '../../css/home.css';
 import { Link }from 'react-router-dom';
 import { RiGithubLine } from 'react-icons/ri';
 import PieDePagina from './PieDePagina';
-import CreateResumeForm from '../CreateResumeForm';
 
 const Home = () => {
     return (

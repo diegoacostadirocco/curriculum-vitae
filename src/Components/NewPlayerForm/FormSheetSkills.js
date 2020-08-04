@@ -1,59 +1,77 @@
-import React from 'react';
-import '../../css/newResumeForm.css'
+import React, { useState } from "react";
+import "../../css/newResumeForm.css";
 
-class FormSheetSkills extends React.Component {
-    constructor(props){
-        super(props);
-        this.state ={aptitud:'', seminary:'', stars:''}
-    }
-    handleAptitudChange = (e) =>{
-        this.setState({aptitud: e.target.value});
-        console.log(e.target.value);
-    }
-    handleSeminaryChange = (e) =>{
-        this.setState({seminary: e.target.value});
-        console.log(e.target.value);
-    }
-    handleStarsChange = (e) =>{
-        this.setState({stars: e.target.value});
-        console.log(e.target.value);
-    }
+const FormSheetSkills = () => {
+  const [skill, setSkill] = useState("");
+  const [seminary, setSeminary] = useState("");
+  const [school, setSchool] = useState("");
+  const [stars, setStars] = useState("");
 
-    render(){
-        return (
-            <div>
-                <div className="fields">
-                    <div className="field">
-                        <label>Aptitudes</label>
-                        <input type="text"
-                            placeholder="¿Que otra aptitud posees?"
-                            value={this.state.aptitud}
-                            onChange={this.handleAptitudChange}
-                            maxLength="20" />
-                    </div>
-                    <div className="field">
-                        <label>Seminario</label>
-                        <input type="text" 
-                            placeholder="¿Donde la aprendiste?"
-                            value={this.state.seminary}
-                            onChange={this.handleSeminaryChange}
-                            maxLength="30" />
-                    </div>
-                    <div className="field">
-                        <label>Nivel de manejo</label>
-                        <input type="number" 
-                            placeholder="1=JR, 5=MASTER"
-                            value={this.state.stars}
-                            onChange={this.handleStarsChange}
-                            min="1"
-                            max="5"
-                            className="number-input" />
-                    </div>
-                    <button className="ui button">agregar skill</button>
-                </div>
-            </div>
-        );
-    }
+  const handleSkillChange = e => {
+    setSkill(e.target.value);
+    console.log(e.target.value);
+  };
+  const handleSeminaryChange = e => {
+    setSeminary(e.target.value);
+    console.log(e.target.value);
+  };
+  const handleSchoolChange = e => {
+    setSchool(e.target.value);
+    console.log(e.target.value);
+  };
+  const handleStarsChange = e => {
+    setStars(e.target.value);
+    console.log(e.target.value);
+  };
+  return (
+    <div>
+      <div className="fields">
+        <div className="field">
+          <label>Aptitudes</label>
+          <input
+            type="text"
+            placeholder="¿Que otra aptitud posees?"
+            value={skill}
+            onChange={handleSkillChange}
+            maxLength="20"
+          />
+        </div>
+        <div className="field">
+          <label>Seminario</label>
+          <input
+            type="text"
+            placeholder="Nombre del curso"
+            value={seminary}
+            onChange={handleSeminaryChange}
+            maxLength="30"
+          />
+        </div>
+        <div className="field">
+          <label>Portal</label>
+          <input
+            type="text"
+            placeholder="¿Donde la aprendiste?"
+            value={school}
+            onChange={handleSchoolChange}
+            maxLength="30"
+          />
+        </div>
+        <div className="field">
+          <label>Nivel de manejo</label>
+          <input
+            type="number"
+            placeholder="1=JR, 5=MASTER"
+            value={stars}
+            onChange={handleStarsChange}
+            min="1"
+            max="5"
+            className="number-input"
+          />
+        </div>
+        <button className="ui button">agregar otra skill</button>
+      </div>
+    </div>
+  );
 };
 
 export default FormSheetSkills;

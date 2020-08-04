@@ -1,58 +1,59 @@
-import React from 'react';
+import React, { useState } from "react";
 
-class FormSheetJobs extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {workPost: '', company: '', lastDate:'',}
-    } 
+const FormSheetJobs = () => {
+  const [workPost, setWorkPost] = useState("");
+  const [company, setCompany] = useState("");
+  const [lastDate, setLastDate] = useState("");
 
-    handleWorkPostChange= (e) => {
-        this.setState({workPost: e.target.value});
-
-        console.log(e.target.value);
-     };
-     handleCompanyChange = (e) => {
-        this.setState({company: e.target.value});
-        console.log(e.target.value);
-     };
-     handleLastDateChange = (e) => {
-        this.setState({lastDate: e.target.value});
-        console.log(e.target.value);
-     };
-     render(){
-        return (
-            <div>
-                <div className="fields"> 
-                    <div className="field">
-                        <label>Tu ultimo trabajo</label>
-                        <input type="text" 
-                               placeholder="¿De que trabajas/abas?"
-                               value={this.state.workPost}
-                               onChange={this.handleWorkPostChange}
-                               maxLength="30" />
-                    </div>
-                    <div className="field">
-                        <label>Empresa</label>
-                        <input type="text"
-                               placeholder="¿Donde?"
-                               value={this.state.company}
-                               onChange={this.handleCompanyChange}
-                               maxLength="30"/>
-                    </div>
-                    <div className="field">
-                        <label>Fecha de finalizacion</label>
-                        <input type="number"
-                               placeholder="¿Hasta cuando?"
-                               value={this.state.lastDate}
-                               onChange={this.handleLastDateChange}
-                               className="number-input"
-                               />
-                    </div>
-                    <button className="ui button">Agregar Trabajo</button>
-                </div>
-            </div>
-        );
-    };
+  const handleWorkPostChange = e => {
+    setWorkPost(e.target.value);
+    console.log(e.target.value);
+  };
+  const handleCompanyChange = e => {
+    setCompany(e.target.value);
+    console.log(e.target.value);
+  };
+  const handleLastDateChange = e => {
+    setLastDate(e.target.value);
+    console.log(e.target.value);
+  };
+  return (
+    <div>
+      <div className="fields">
+        <div className="field">
+          <label>Tu ultimo trabajo</label>
+          <input
+            type="text"
+            placeholder="¿De que trabajas/abas?"
+            value={workPost}
+            onChange={handleWorkPostChange}
+            maxLength="30"
+          />
+        </div>
+        <div className="field">
+          <label>Empresa</label>
+          <input
+            type="text"
+            placeholder="¿Donde?"
+            value={company}
+            onChange={handleCompanyChange}
+            maxLength="30"
+          />
+        </div>
+        <div className="field">
+          <label>Fecha de finalizacion</label>
+          <input
+            type="number"
+            placeholder="¿Hasta cuando?"
+            value={lastDate}
+            onChange={handleLastDateChange}
+            className="number-input"
+          />
+        </div>
+        <button className="ui button">Agregar otro Trabajo</button>
+      </div>
+    </div>
+  );
 };
 
 export default FormSheetJobs;

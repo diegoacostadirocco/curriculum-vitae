@@ -1,20 +1,23 @@
 import React from 'react';
-import { Link }from 'react-router-dom';
+import { NavLink }from 'react-router-dom';
 import './../css/home.css';
 
 const Nav = () => {
-    
+
     return (
-        <div style={{listStyle: "none"}} className="ui huge three inverted item menu">
-            <Link to="/" className="blue item">
-                <li href='./Home.js'>Inicio</li>
-            </Link>
-            <Link to="/example-resume" className="teal item"> 
-                <li href="./ExampleCV.js">Ejemplo</li>
-            </Link>
-            <Link to="/create-resume" className="olive item"> 
-                <li href="./CreateResumeForm.js">Crea tu CV</li>
-            </Link> 
+        <div style={{listStyle: "none"}} className="ui huge four inverted item menu">
+            <NavLink to="/" exact activeStyle={{color:"grey"}} className="item">
+                Inicio
+            </NavLink>
+            <NavLink to="/example-resume" activeStyle={{color:"grey"}} className="item"> 
+                Ejemplo
+            </NavLink>
+            <NavLink to="/create-resume" activeStyle={{color:"grey"}} className="item"> 
+                Crea tu CV
+            </NavLink> 
+            <NavLink to="/user-resume" activeStyle={{color:"grey"}} className="item"> 
+                Tu CV
+            </NavLink> 
         </div>
     );
 };
