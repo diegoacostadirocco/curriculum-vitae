@@ -7,9 +7,9 @@ import Body from './ejemplo/Body/index';
 
 const ExampleCV = () => {
     return (
-        // <div className="ui container exampleCV">
+        <div className="ui container">
 
-         <Container className="ui container exampleCV" maxWidth="md"> 
+         <Container className="exampleCV" maxWidth="md"> 
             <Grid container spacing={3}>
                 <Grid item xs={12}></Grid>
                     <Header className="header" />
@@ -23,7 +23,7 @@ const ExampleCV = () => {
                     <Footer className="footer" />
             </Grid>
          </Container>
-        // </div>
+         </div>
 
     );
 };
