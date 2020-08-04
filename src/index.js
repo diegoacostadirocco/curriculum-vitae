@@ -4,7 +4,7 @@ import './css/Styles.css';
 import ExampleCV from './Components/ExampleCV';
 import CreateResumeForm from './Components/CreateResumeForm';
 import Nav from './Components/Nav';
-import Home from './Components/Home';
+import Home from './Components/inicio/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
@@ -18,8 +18,7 @@ const App = () => {
                     <Route path ="/create-resume" component ={CreateResumeForm} />
                 </Switch>
             </div>
-        </Router>
-       
+        </Router>      
     );
 }
 

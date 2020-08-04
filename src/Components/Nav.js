@@ -5,7 +5,7 @@ import './../css/home.css';
 const Nav = () => {
     
     return (
-        <div id="nav-list" className="ui three inverted item menu">
+        <div style={{listStyle: "none"}} className="ui huge three inverted item menu">
             <Link to="/" className="blue item">
                 <li href='./Home.js'>Inicio</li>
             </Link>

@@ -4,8 +4,9 @@ import { example } from '../../../DataCV';
 const Study = () => {
     const listOfEstudios= example.persona.estudios.map(
         (objMapped) => 
-        <div key={`${objMapped.title}_${objMapped.college}`}>
-            <li><b>{`"${objMapped.title}" - ${objMapped.college}`}</b></li>
+        <div key={`${objMapped.title}_${objMapped.college}`} className="estudios">
+            <b>{`${objMapped.title}`}</b>
+            -<span>{`${objMapped.college}`}</span>
         </div>);
         return (
             <div>

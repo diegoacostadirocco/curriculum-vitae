@@ -14,8 +14,18 @@ export const example = {
                 endDate: 0,
                 },
                 {
-                workPost: "App",
-                company: "Freelance dev",
+                workPost: "Operador telefonico",
+                company: "Activo S.A.",
+                endDate: 0,
+                },
+                {
+                workPost: "Administrativo",
+                company: "Flecha Bus Viajes SRL",
+                endDate: 0,
+                },
+                {
+                workPost: "Atencion al cliente",
+                company: "La Brujula, estudio de musica",
                 endDate: 0,
                 },
         ],

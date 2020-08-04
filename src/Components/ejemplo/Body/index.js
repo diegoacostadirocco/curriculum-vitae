@@ -8,7 +8,7 @@ import Formation from './Formation/index';
 
 const Body = () => {
     return (
-        <div>
+        <div id="body">
             <Grid container spacing={2}
                   direction="column">
                 <Grid item xs>
@@ -16,6 +16,7 @@ const Body = () => {
                         <Knowledge  />
                     </Paper>
                 </Grid>
+                <br/>
                 <Grid item xs>
                     <Paper elevation={2}>
                         <Formation />

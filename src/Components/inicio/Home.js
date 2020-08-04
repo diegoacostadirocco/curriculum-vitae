@@ -1,8 +1,9 @@
 import React from 'react';
-import '../css/home.css';
-import PieDePagina from './ejemplo/Footer/PieDePagina';
+import '../../css/home.css';
+import { Link }from 'react-router-dom';
 import { RiGithubLine } from 'react-icons/ri';
-// import CreateResumeForm from './CreateResumeForm';
+import PieDePagina from './PieDePagina';
+import CreateResumeForm from '../CreateResumeForm';
 
 const Home = () => {
     return (
@@ -10,10 +11,10 @@ const Home = () => {
             <div className="ui container new-resume-form">
                 <h3 className="ui block header">Haz tu Curriculum en 1 solo paso</h3>
                 <h1 style={{textAlign:"center"}}> Esto es HURRAY!</h1>
-                <div className="ui brown message">
-                    En la siguiente pagina te dejo mi Curriculum personal para que te sirva de ejemplo.
-                    En la plantilla <a href="./CreateResumeForm">CREA TU CV</a> podras llenar con tus datos y disfrutar de tu propio CV.
-                    Buscas trabajo? Hurray!
+                <div className="ui brown message message">
+                    En la siguiente pagina podras ver mi Curriculum personal para que te sirva de ejemplo.
+    En la plantilla <Link to="/create-resume"><li>CREA TU CV</li></Link> podras ingresar tus datos y disfrutar de tu propio CV.
+                    Buscas trabajo? Nosotros te ayudamos, Hurray!
                 </div>
                 <br/>
                 <PieDePagina />

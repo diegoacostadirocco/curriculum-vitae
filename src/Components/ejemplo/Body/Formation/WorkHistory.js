@@ -6,7 +6,7 @@ const WorkHistory = () => {
     const listOfWorks = example.persona.trabajos.map(
     (objMapped) => 
         <div key={`${objMapped.workPost}_${objMapped.company}`}>
-            <li>{`${objMapped.workPost} - ${objMapped.company}`}</li>
+            <b>{`${objMapped.workPost}`}</b> -<span>{`${objMapped.company}`}</span>
             <br/>
         </div>);
     return (

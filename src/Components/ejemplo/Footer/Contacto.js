@@ -5,7 +5,7 @@ import { FaLinkedin } from 'react-icons/fa';
 import { example } from '../../DataCV';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import './../../../css/Contacto.css';
+import './../../../css/footer.css';
 import PropTypes from 'prop-types';
 
 const Contacto = () => {
