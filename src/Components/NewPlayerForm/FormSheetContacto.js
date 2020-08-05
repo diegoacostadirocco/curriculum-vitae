@@ -46,7 +46,7 @@ const FormSheetContacto = () => {
         <input
           type="text"
           name="linkedIn"
-          placeholder=" ESCRIBE SOLO TU PERFIL"
+          placeholder="escribe el Link completo de tu perfil"
           value={linkedIn}
           onChange={handleLinkedInChange}
           maxLength="40"

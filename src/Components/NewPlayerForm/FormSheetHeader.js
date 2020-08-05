@@ -7,7 +7,6 @@ const FormSheetHeader = () => {
 
   const handleNameChange = e => {
     setName(e.target.value);
-
     console.log(e.target.value);
   };
   const handleJobChange = e => {
@@ -23,11 +22,12 @@ const FormSheetHeader = () => {
       <div className="fields">
         <div className="required field">
           <label>Foto CV</label>
-          <input type="file" id="userPhoto" name="foto CV" />
+          <input type="file" id="userPhoto" name="foto-CV" />
         </div>
         <div className="required field">
           <label>Nombre Completo</label>
           <input
+            name="name"
             type="text"
             placeholder="Nombre completo"
             value={name}
@@ -43,6 +43,7 @@ const FormSheetHeader = () => {
             value={job}
             onChange={handleJobChange}
             maxLength="150"
+            name="job"
           />
         </div>
       </div>
@@ -50,6 +51,7 @@ const FormSheetHeader = () => {
         <div className="required field">
           <label>Sumario Profesional</label>
           <textarea
+              name="sumario"
               rows="3"
               type="text"
               placeholder="..."

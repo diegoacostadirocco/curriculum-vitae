@@ -1,59 +1,79 @@
 import React, { useState } from "react";
+import { BsTrash } from 'react-icons/bs';
 
 const FormSheetJobs = () => {
-  const [workPost, setWorkPost] = useState("");
-  const [company, setCompany] = useState("");
-  const [lastDate, setLastDate] = useState("");
 
-  const handleWorkPostChange = e => {
-    setWorkPost(e.target.value);
-    console.log(e.target.value);
+  const [trabajos, setTrabajos] = useState([
+    { workPost: "", company: "", lastDate: "" }
+  ]);
+
+  const handleInputChange = (e, index) => {
+    const { name, value } = e.target;
+    const job = [...trabajos];
+    job[index][name] = value;
+    setTrabajos(job);
   };
-  const handleCompanyChange = e => {
-    setCompany(e.target.value);
-    console.log(e.target.value);
+  const handleRemoveClick = index => {
+    const job = [...trabajos];
+    job.splice(index, 1);
+    setTrabajos(job);
   };
-  const handleLastDateChange = e => {
-    setLastDate(e.target.value);
-    console.log(e.target.value);
+  const handleAddClick = () => {
+    setTrabajos([...trabajos, { workPost: "", company: "", lastDate: "" }]);
   };
   return (
     <div>
-      <div className="fields">
-        <div className="field">
-          <label>Tu ultimo trabajo</label>
-          <input
-            type="text"
-            placeholder="¿De que trabajas/abas?"
-            value={workPost}
-            onChange={handleWorkPostChange}
-            maxLength="30"
-          />
-        </div>
-        <div className="field">
-          <label>Empresa</label>
-          <input
-            type="text"
-            placeholder="¿Donde?"
-            value={company}
-            onChange={handleCompanyChange}
-            maxLength="30"
-          />
-        </div>
-        <div className="field">
-          <label>Fecha de finalizacion</label>
-          <input
-            type="number"
-            placeholder="¿Hasta cuando?"
-            value={lastDate}
-            onChange={handleLastDateChange}
-            className="number-input"
-          />
-        </div>
-        <button className="ui button">Agregar otro Trabajo</button>
+    {trabajos.map((x, i) => {
+        return(
+        <div key={`${x} ${i}`} className="fields">
+            <div className="field">
+            <label>Tu ultimo trabajo</label>
+            <input
+                name="workPost"
+                type="text"
+                placeholder="¿De que trabajas/abas?"
+                value={x.workPost}
+                onChange={e => handleInputChange(e, i)}
+                maxLength="30"
+            />
+            </div>
+            <div className="field">
+            <label>Empresa</label>
+            <input
+                name="company"
+                type="text"
+                placeholder="¿Donde?"
+                value={x.company}
+                onChange={e => handleInputChange(e, i)}
+                maxLength="30"
+            />
+            </div>
+            <div className="field">
+            <label>Fecha de finalizacion</label>
+            <input
+                type="text"
+                name="lastDate"
+                placeholder="MM-YYYY"
+                value={x.lastDate}
+                onChange={e => handleInputChange(e, i)}
+                className="number-input"
+                maxLength="7"
+            />
+            </div>
+            <div style={{textAlign:"center"}}>
+              {trabajos.length !== 1 && (
+                <button className="ui button" onClick={() => handleRemoveClick(i)}>
+                  <BsTrash />
+                </button>
+              )}
+              {trabajos.length - 1 === i && (
+              <button style={{margin:"5px"}}className="ui button" onClick={handleAddClick}>
+              Agregar Trabajo
+                </button>
+              )}
+        </div> 
       </div>
-    </div>
-  );
-};
-
+        )})}
+    </div>)
+}
 export default FormSheetJobs;
