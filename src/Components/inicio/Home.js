@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../css/home.css';
 import { Link }from 'react-router-dom';
-import { RiGithubLine } from 'react-icons/ri';
+import { AiFillGithub } from 'react-icons/Ai';
 import PieDePagina from './PieDePagina';
 
 const Home = () => {
@@ -21,7 +21,7 @@ const Home = () => {
             <div className="ui inverted vertical masthead center aligned segment">
                 <a href="https://github.com/diegoacostadirocco" 
                    className="item" target="_blank" rel="noopener noreferrer">
-                    <RiGithubLine />
+                    <AiFillGithub />
                     <h3 className="ui inverted header">
                         https://github.com/diegoacostadirocco
                     </h3>
