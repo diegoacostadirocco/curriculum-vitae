@@ -9,14 +9,15 @@ const FormSheetJobs = () => {
 
   const handleInputChange = (e, index) => {
     const { name, value } = e.target;
-    const job = [...trabajos];
-    job[index][name] = value;
-    setTrabajos(job);
+    const work = [...trabajos];
+    work[index][name] = value;
+    setTrabajos(work);
+    console.log({trabajos});
   };
   const handleRemoveClick = index => {
-    const job = [...trabajos];
-    job.splice(index, 1);
-    setTrabajos(job);
+    const work = [...trabajos];
+    work.splice(index, 1);
+    setTrabajos(work);
   };
   const handleAddClick = () => {
     setTrabajos([...trabajos, { workPost: "", company: "", lastDate: "" }]);

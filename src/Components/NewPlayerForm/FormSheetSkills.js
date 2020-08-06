@@ -12,6 +12,7 @@ const FormSheetSkills = () => {
     const exp = [...expertise];
     exp[index][name] = value;
     setExpertise(exp);
+    console.log({expertise});
   };
   const handleRemoveClick = index => {
     const exp = [...expertise];

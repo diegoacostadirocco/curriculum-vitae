@@ -6,18 +6,17 @@ import FormSheetJobs from './NewPlayerForm/FormSheetJobs';
 import FormSheetSkills from './NewPlayerForm/FormSheetSkills';
 import FormSheetContacto from './NewPlayerForm/FormSheetContacto';
 
-
 const CreateResumeForm = () => {
 
-    const handleSubmit = (event, data) => {
+    const handleSubmit = (event, estudios, trabajos, expertise) => {
         event.preventDefault();
-        console.log(data);
+        console.log(trabajos, estudios, expertise);
     }
 
     return (
     <div className="ui container new-resume-form">
         <h1 style={{textAlign:"center"}}>CREA TU CV.</h1>
-        <form  onSubmit={handleSubmit} className="ui equal width form">
+        <form action="/user-resume" onSubmit={handleSubmit} className="ui equal width form">
             <FormSheetHeader />
             <br/>
             <div className="ui horizontal divider">Estudios</div>

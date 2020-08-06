@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../css/home.css';
 import { Link }from 'react-router-dom';
-import { AiFillGithub } from 'react-icons/Ai';
+import { AiFillGithub } from 'react-icons/ai';
 import PieDePagina from './PieDePagina';
 
 const Home = () => {

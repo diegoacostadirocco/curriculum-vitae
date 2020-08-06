@@ -11,6 +11,7 @@ const FormSheetStudies = () => {
         const study = [...estudios];
         study[index][name] = value;
         setEstudios(study);
+        console.log({estudios});
       };
       const handleRemoveClick = index => {
         const study = [...estudios];
