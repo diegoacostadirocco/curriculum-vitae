@@ -13,11 +13,11 @@ const Contacto = () => {
     return (
         <div className="contacto">
             <span></span>
-            <Grid container spacing={1}
+            <Grid container spacing={2}
                     direction="row">
                 <Grid item xs>
                     <Paper elevation={2} className="linksDeContacto">
-                        <a href={`mailto: ${example.persona.mail}`}>
+                        <a href={`mailto: ${example.persona.mail}`} style={{wordWrap:"break-word"}}>
                             <FiMail />{example.persona.mail}
                         </a>
                     </Paper>

@@ -9,8 +9,10 @@
 .listOfUsed {
     list-style: none;
     text-align: center;
-    
 } 
+.listOfUsed span{
+    padding: 5px;
+}
 .message a {
     list-style: none;
     display: inline-block;
