@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import './css/Styles.css';
 import ExampleCV from './Components/ExampleCV';
 import CreateResumeForm from './Components/CreateResumeForm';
-import Nav from './Components/Nav';
+import Nav from './Components/constants/Nav';
 import Home from './Components/inicio/Home';
-import UserResume from './Components/userResume/UserResume';
+import UserResume from './Components/UserResume';
 const App = () => {
     return (
         <Router>

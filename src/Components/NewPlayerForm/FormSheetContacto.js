@@ -33,7 +33,8 @@ const FormSheetContacto = () => {
       <div className="field">
         <label>Numero de Contacto</label>
         <input
-          type="number"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}-[0-9]{4}"
+          type="tel"
           name="phone"
           placeholder="numero de contacto"
           value={phone}

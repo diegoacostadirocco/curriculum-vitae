@@ -12,7 +12,7 @@ const Header = () => {
             <Grid item xs={3}
                   className="foto-header">
                 <img className="disabled ui centered image"
-                     src={null} alt="fotoCV" />
+                     src={undefined} alt="fotoCV" />
             </Grid>
             <Grid item xs={9}>
                 <Paper className="titulo">

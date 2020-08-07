@@ -1,16 +1,17 @@
 import React from 'react';
 // import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Footer from './Footer/Footer'
-import Header from './Header/Header';
-import Body from './Body/index';
+import Footer from './userResume/Footer/Footer'
+import Header from './userResume/Header/Header';
+import Body from './userResume/Body/index';
+import DownBar from './constants/DownBar';
 
 
 const ExampleCV = () => {
     
     return (
+    <div>
         <div className="ui container new-resume-form">
-         {/* <Container className="exampleCV" maxWidth="md">  */}
             <Grid container spacing={3}>
                 <Grid item xs={12}></Grid>
                     <Header />
@@ -23,8 +24,9 @@ const ExampleCV = () => {
                 <Grid item xs={12}>
                     <Footer />
             </Grid>
-         {/* </Container> */}
-         </div>
+        </div>
+        <DownBar />
+    </div>
     );
 };
 

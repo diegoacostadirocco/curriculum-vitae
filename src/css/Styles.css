@@ -7,6 +7,6 @@ padding: 5px;
 .app{
     background-image: url('../A-GOOD-RESUME-IS-THE-KEY-TO-SUCCESS-DURING-JOB-HUNTING.jpg');
     background-repeat: no-repeat;
-    background-size: 100%; 
+    background-size:auto; 
     height: 100%;
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../css/home.css';
 import { Link }from 'react-router-dom';
-import { AiFillGithub } from 'react-icons/ai';
 import PieDePagina from './PieDePagina';
+import DownBar from '../constants/DownBar';
 
 const Home = () => {
     return (
@@ -18,15 +18,8 @@ const Home = () => {
                 <br/>
                 <PieDePagina />
             </div>
-            <div className="ui inverted vertical masthead center aligned segment">
-                <a href="https://github.com/diegoacostadirocco" 
-                   className="item" target="_blank" rel="noopener noreferrer">
-                    <AiFillGithub />
-                    <h3 className="ui inverted header">
-                        https://github.com/diegoacostadirocco
-                    </h3>
-                </a>
-            </div>
+            <DownBar />
+
        </div>
     );
 };

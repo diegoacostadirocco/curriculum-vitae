@@ -84,7 +84,7 @@ export const userList = {
         job: "Profesion",
         mail: "mail@to.com",
         phone: "1234567890",
-        linkedIn: `www.linkedin.com/in/pepito`,
+        linkedIn: `www.linkedin.com/in/user`,
         trabajos: [
                 {
                 workPost: "ex-trabajo",
