@@ -33,7 +33,6 @@ const FormSheetJobs = () => {
                 name="workPost"
                 type="text"
                 placeholder="¿De que trabajas/abas?"
-                value={x.workPost}
                 onChange={e => handleInputChange(e, i)}
                 maxLength="30"
             />
@@ -44,7 +43,6 @@ const FormSheetJobs = () => {
                 name="company"
                 type="text"
                 placeholder="¿Donde?"
-                value={x.company}
                 onChange={e => handleInputChange(e, i)}
                 maxLength="30"
             />
@@ -55,7 +53,6 @@ const FormSheetJobs = () => {
                 type="text"
                 name="lastDate"
                 placeholder="MM-YYYY"
-                value={x.lastDate}
                 onChange={e => handleInputChange(e, i)}
                 className="number-input"
                 maxLength="7"

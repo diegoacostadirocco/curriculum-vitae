@@ -7,6 +7,7 @@ import CreateResumeForm from './Components/CreateResumeForm';
 import Nav from './Components/constants/Nav';
 import Home from './Components/inicio/Home';
 import UserResume from './Components/UserResume';
+
 const App = () => {
     return (
         <Router>

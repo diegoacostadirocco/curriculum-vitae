@@ -1,8 +1,8 @@
 import React from 'react';
-import { userList } from '../../../DataCV';
+import { cvFinal } from '../../../DataCV';
 
 const Study = () => {
-    const listOfEstudios= userList.user.estudios.map(
+    const listOfEstudios= cvFinal.user.estudios.map(
         (objMapped) => 
         <div key={`${objMapped.title}_${objMapped.college}`} className="estudios">
             <b>{`${objMapped.title}`}</b>

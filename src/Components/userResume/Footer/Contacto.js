@@ -2,7 +2,7 @@ import React from 'react';
 import {FiMail} from 'react-icons/fi';
 import {FcCallback} from 'react-icons/fc';
 import {FaLinkedin} from 'react-icons/fa';
-import {userList} from '../../DataCV';
+import {cvFinal} from '../../DataCV';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import './../../../css/footer.css';
@@ -15,15 +15,15 @@ const Contacto = () => {
             <Grid container spacing={1} direction="row">
                 <Grid item xs>
                     <Paper elevation={2} className="linksDeContacto">
-                        <a href={`mailto: ${userList.user.mail}`}>
-                            <FiMail/>{userList.user.mail}
+                        <a href={`mailto: ${cvFinal.user.mail}`}>
+                            <FiMail/>{cvFinal.user.mail}
                         </a>
                     </Paper>
                 </Grid>
                 <Grid item xs>
                     <Paper elevation={2} className="linksDeContacto">
-                        <a href={`tel:${userList.user.phone}`}>
-                            <FcCallback/>{userList.user.phone}
+                        <a href={`tel:${cvFinal.user.phone}`}>
+                            <FcCallback/>{cvFinal.user.phone}
                         </a>
                     </Paper>
                 </Grid>
@@ -32,7 +32,7 @@ const Contacto = () => {
                         <a href="https://www.linkedin.com/in/adrdiegomartin/"
                            target="_blank"
                            rel="noopener noreferrer">
-                            <FaLinkedin/>{userList.user.linkedIn}
+                            <FaLinkedin/>{cvFinal.user.linkedIn}
                         </a>
                     </Paper>
                 </Grid>

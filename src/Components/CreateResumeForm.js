@@ -6,12 +6,14 @@ import FormSheetJobs from './NewPlayerForm/FormSheetJobs';
 import FormSheetSkills from './NewPlayerForm/FormSheetSkills';
 import FormSheetContacto from './NewPlayerForm/FormSheetContacto';
 import DownBar from './constants/DownBar';
+import { cvFinal } from './DataCV';
+import {cvBorrador} from './DataCV';
 
 const CreateResumeForm = () => {
 
-    const handleSubmit = (event, estudios, trabajos, expertise) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(trabajos, estudios, expertise);
+        cvFinal.user = cvBorrador.user;
     }
 
     return (

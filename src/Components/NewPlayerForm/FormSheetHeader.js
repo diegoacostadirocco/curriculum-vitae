@@ -1,21 +1,20 @@
 import React, { useState } from "react";
+import { cvBorrador } from "../DataCV";
 
 const FormSheetHeader = () => {
-  const [name, setName] = useState("");
-  const [job, setJob] = useState("");
-  const [sumario, setSumario] = useState("");
+  const [name, setName] = useState(cvBorrador.user.name);
+
 
   const handleNameChange = e => {
     setName(e.target.value);
+    cvBorrador.user.name = e.target.value;
     console.log(e.target.value);
   };
   const handleJobChange = e => {
-    setJob(e.target.value);
-    console.log(e.target.value);
+    cvBorrador.user.job = e.target.value;
   };
   const handleSumarioChange = e => {
-    setSumario(e.target.value);
-    console.log(e.target.value);
+    cvBorrador.user.sumario = e.target.value;
   };
   return (
     <div>
@@ -40,7 +39,6 @@ const FormSheetHeader = () => {
           <input
             type="text"
             placeholder="¿A que te dedicas?"
-            value={job}
             onChange={handleJobChange}
             maxLength="150"
             name="job"
@@ -55,7 +53,6 @@ const FormSheetHeader = () => {
               rows="3"
               type="text"
               placeholder="..."
-              value={sumario}
               onChange={handleSumarioChange}
               style={{resize:"none"}}
             />

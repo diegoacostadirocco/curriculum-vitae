@@ -3,12 +3,12 @@ import React from 'react';
 import Rating from '@material-ui/lab/Rating';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { userList } from '../../../DataCV';
+import { cvFinal } from '../../../DataCV';
 
 
 
 const Knowledge = () => {
-    const listOfExpertise = userList.user.expertise.map(
+    const listOfExpertise = cvFinal.user.expertise.map(
         (objMapped) => 
             <Grid item xs key={`${objMapped.skill}
             _${objMapped.seminary}_${objMapped.school}

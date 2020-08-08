@@ -76,7 +76,7 @@ export const example = {
         ],
     },
 }
-export const userList = {
+export let cvFinal = {
     user: {
         sumario: "este es sumario",
         name: "Nombre Completo",
@@ -103,6 +103,37 @@ export const userList = {
                 seminary: '"seminario"',
                 school: "escuela/portal",
                 stars: 5,
+            },
+        ],
+    },
+}
+export let cvBorrador = {
+    user: {
+        sumario: "",
+        name: "",
+        job: "",
+        mail: "",
+        phone: "",
+        linkedIn: ``,
+        trabajos: [
+            {
+                workPost: "",
+                company: "",
+            },
+        ],
+        estudios: [
+            {
+                title: "",
+                college: "",
+            },
+
+        ],
+        expertise: [
+            {
+                skill: "",
+                seminary: '""',
+                school: "",
+                stars: 1,
             },
         ],
     },

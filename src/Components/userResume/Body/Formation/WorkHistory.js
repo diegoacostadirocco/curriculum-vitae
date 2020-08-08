@@ -1,9 +1,9 @@
 import React from 'react';
-import { userList } from '../../../DataCV';
+import { cvFinal } from '../../../DataCV';
 
 const WorkHistory = () => {
     
-    const listOfWorks = userList.user.trabajos.map(
+    const listOfWorks = cvFinal.user.trabajos.map(
     (objMapped) => 
         <div key={`${objMapped.workPost}_${objMapped.company}`}>
             <b>{`${objMapped.workPost}`}</b> -<span>{`${objMapped.company}`}</span>
