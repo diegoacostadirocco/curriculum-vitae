@@ -1,14 +1,16 @@
 .footer-sign{
         background-color: #212121;
-        position: absolute;
+        position: sticky bottom;
         left: 0;
         width: 100%;
         padding: 15px 0;
         color: white;
+
 }
 .listOfUsed {
     list-style: none;
     text-align: center;
+    
 } 
 .listOfUsed span{
     padding: 5px;
