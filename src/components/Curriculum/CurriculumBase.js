@@ -1,20 +1,15 @@
 import React from 'react';
-// import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import Footer from './ejemplo/Footer/Footer';
-import Header from './ejemplo/Header/Header';
-import Body from './ejemplo/Body/index';
-import DownBar from './shared/DownBar';
-import {example} from "./DataCV";
+import Footer from './Footer/Footer';
+import Header from './Header/Header';
+import Body from './Body/index';
+import DownBar from '../shared/DownBar';
 
 
-const ExampleCV = (props) => {
-    const cv = example.persona
-
+const CurriculumBase = ({cv}) => {
     return (
         <div>
             <div className="ui container new-resume-form">
-            {/* <Container className="exampleCV" maxWidth="md">  */}
                 <Grid container spacing={3}>
                     <Grid item xs={12}></Grid>
                         <Header cv={cv} />
@@ -22,10 +17,10 @@ const ExampleCV = (props) => {
                     <br/>
                     <br/>
                     <Grid item xs={12}>
-                        <Body/>
+                         <Body cv={cv} />
                     </Grid>
                     <Grid item xs={12}>
-                        <Footer />
+                        <Footer cv={cv}/>
                 </Grid>
             </div>
             <DownBar />
@@ -33,4 +28,4 @@ const ExampleCV = (props) => {
     );
 };
 
-export default ExampleCV;
+export default CurriculumBase;

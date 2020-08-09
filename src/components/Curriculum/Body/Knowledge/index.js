@@ -3,26 +3,25 @@ import React from 'react';
 import Rating from '@material-ui/lab/Rating';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import { example } from '../../../DataCV';
 
 
 
-const Knowledge = () => {
-    const listOfExpertise = example.persona.expertise.map(
-        (objMapped) => 
-            <Grid item xs key={`${objMapped.skill}
-            _${objMapped.seminary}_${objMapped.school}
-            _${objMapped.stars}`}>
+const Knowledge = (props) => {
+    const listOfExpertise = props.cv.expertise.map(
+        (expertee) => 
+            <Grid item xs key={`${expertee.skill}
+            _${expertee.seminary}_${expertee.school}
+            _${expertee.stars}`}>
                 <Paper elevation={5}>
                     <div 
                         className="skill" >
-                        <b>{`${objMapped.skill}`}</b>
+                        <b>{`${expertee.skill}`}</b>
                         <br/>
-                        <span>{`${objMapped.seminary}`}</span>
+                        <span>{`${expertee.seminary}`}</span>
                         <br/>
-                        en <p>{`${objMapped.school}`}</p>
+                        en <p>{`${expertee.school}`}</p>
                          Nivel de manejo:   
-                        <Rating name="read-only" value={objMapped.stars} readOnly />
+                        <Rating name="read-only" value={expertee.stars} readOnly />
                     </div>
                 </Paper>
             </Grid>

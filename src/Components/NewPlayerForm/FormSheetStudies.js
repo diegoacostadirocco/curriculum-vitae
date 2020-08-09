@@ -1,51 +1,41 @@
 import React, { useState } from "react";
 import { BsTrash } from 'react-icons/bs';
+import { cvBorrador } from "../../DataCV";
+import { InputCvBorrador } from "../shared/BorradorInputs";
+
 
 const FormSheetStudies = () => {
-    const [estudios, setEstudios] = useState([
-        { title: "", college: "" }
-      ]);
+    const [estudios, setEstudios] = useState(cvBorrador.user.estudios);
 
-      const handleInputChange = (e, index) => {
-        const { name, value } = e.target;
-        const study = [...estudios];
-        study[index][name] = value;
-        setEstudios(study);
-        console.log({estudios});
-      };
       const handleRemoveClick = index => {
         const study = [...estudios];
         study.splice(index, 1);
         setEstudios(study);
       };
       const handleAddClick = () => {
-        setEstudios([...estudios, { title: "", college: "" }]);
+        const nuevosEstudios = [...estudios, { title: "", college: "" }];
+        cvBorrador.user.estudios = nuevosEstudios;
+        setEstudios(nuevosEstudios);
       };
   
   return (
     <div>
-     {estudios.map((x, i) => {
+     {estudios.map((estudio, i) => {
         return(
-      <div key={`${x} ${i}`} className="required fields">
+      <div key={`${estudio} ${i}`} className="required fields">
         <div className="field">
           <label>Estudio</label>
-          <input
-            name="title"
-            type="text"
+          <InputCvBorrador
+            nombreDelCampo={`estudios[${i}].title`}
             placeholder="¿Que estudiaste?"
-            value={x.title}
-            onChange={e =>handleInputChange (e, i)}
-            maxLength="20"
+            maxLength="30"
           />
         </div>
         <div className="field">
           <label>Universidad/Instituto</label>
-          <input
-            name="college"
-            type="text"
+          <InputCvBorrador
+          nombreDelCampo={`estudios[${i}].college`}
             placeholder="¿Donde lo estudiaste?"
-            value={x.college}
-            onChange={e => handleInputChange(e, i)}
             maxLength="20"
           />
         </div>

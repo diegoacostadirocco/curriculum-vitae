@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {cvBorrador} from "../DataCV";
+import {cvBorrador} from "../../DataCV";
 import _ from "lodash";
 
 export const InputCvBorrador = (props) => {

@@ -1,11 +1,12 @@
 import React from 'react';
-import { example } from '../../DataCV';
 import './../../../css/encabezado.css';
-const Summary = () => {
+
+
+const Summary = (props) => {
     return (
         <div className="sumario">
             <h3>Sumario Profesional:</h3>
-            <p>{example.persona.sumario}</p>
+            <p>{props.cv.sumario}</p>
         </div>
     );
 };

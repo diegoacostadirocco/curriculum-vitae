@@ -6,20 +6,20 @@ import Formation from './Formation/index';
 
 
 
-const Body = () => {
+const Body = (props) => {
     return (
         <div id="body">
             <Grid container spacing={2}
                   direction="column">
                 <Grid item xs>
                     <Paper elevation={2}>
-                        <Knowledge  />
+                        <Knowledge cv={props.cv}   />
                     </Paper>
                 </Grid>
                 <br/>
                 <Grid item xs>
                     <Paper elevation={2}>
-                        <Formation />
+                        <Formation cv={props.cv} />
                     </Paper>
                 </Grid>
             </Grid>

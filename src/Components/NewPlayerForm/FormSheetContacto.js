@@ -1,56 +1,31 @@
-import React, { useState } from "react";
+import React from "react";
+import { InputCvBorrador } from "../shared/BorradorInputs";
+
 
 const FormSheetContacto = () => {
-  const [mail, setMail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [linkedIn, setLinkedIn] = useState("");
 
-  const handleMailChange = e => {
-    setMail(e.target.value);
-    console.log(e.target.value);
-  };
-  const handlePhoneChange = e => {
-    setPhone(e.target.value);
-    console.log(e.target.value);
-  };
-  const handleLinkedInChange = e => {
-    setLinkedIn(e.target.value);
-    console.log(e.target.value);
-  };
   return (
     <div className="required fields">
       <div className="field">
         <label>Mail</label>
-        <input
-          maxLength="50"
-          type="text"
-          name="mail"
+        <InputCvBorrador
+          nombreDelCampo="mail"
           placeholder="mail"
-          value={mail}
-          onChange={handleMailChange}
         />
       </div>
       <div className="field">
         <label>Numero de Contacto</label>
-        <input
-          pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}-[0-9]{4}"
-          type="tel"
-          name="phone"
+        <InputCvBorrador
           placeholder="numero de contacto"
-          value={phone}
-          onChange={handlePhoneChange}
+          nombreDelCampo="phone"
           maxLength="15"
         />
       </div>
       <div className="field">
         <label>Linkedin</label>
-        <input
-          type="text"
-          name="linkedIn"
+        <InputCvBorrador
+          nombreDelCampo="linkedIn"
           placeholder="escribe el Link completo de tu perfil"
-          value={linkedIn}
-          onChange={handleLinkedInChange}
-          maxLength="40"
         />
       </div>
     </div>

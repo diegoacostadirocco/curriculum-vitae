@@ -5,16 +5,16 @@ import Study from './Study';
 import './../../../../css/body.css';
 
 
-const Formation = () => {
+const Formation = (props) => {
     return (
         <div className="formation">
             <Grid container spacing={5}
                   direction="row">
                 <Grid item xs>
-                    <Study />
+                    <Study cv={props.cv}/>
                 </Grid>
                 <Grid item xs>
-                    <WorkHistory />
+                    <WorkHistory cv={props.cv} />
                 </Grid>
             </Grid>
         </div> 

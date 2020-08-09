@@ -1,5 +1,6 @@
 export const example = {
     persona: {
+        foto: undefined ,
         sumario: "este es mi sumario profesional",
         name: "Diego Martin Acosta Di Rocco",
         job: "Desarrollador FrontEnd",
@@ -78,6 +79,7 @@ export const example = {
 }
 export let cvFinal = {
     user: {
+        foto: undefined ,
         sumario: "este es sumario",
         name: "Nombre Completo",
         job: "Profesion",
@@ -134,7 +136,7 @@ export let cvBorrador = {
                 skill: "",
                 seminary: '""',
                 school: "",
-                stars: 1,
+                stars: undefined,
             },
         ],
     },

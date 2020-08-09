@@ -2,25 +2,24 @@ import './../../../css/encabezado.css';
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { Paper } from '@material-ui/core';
-import {cvBorrador, cvFinal} from './../../DataCV';
-// import image from './fotominicv.jpg';
 import Summary from './Summary';
 
-const Header = () => {
+const Header = (props) => {
+    console.log(props.cv.foto);
+
     return (
         <Grid container spacing={2} direction="row" className="encabezado">
             <Grid item xs={3}
                   className="foto-header">
-                {cvFinal.user.foto && <img className="ui centered image"
-                      src={URL.createObjectURL(cvFinal.user.foto)} alt="fotoCV"/>}
-
+                {props.foto && <img className="ui centered image"
+                      src={URL.createObjectURL(props.cv.foto)} alt="fotoCV"/>}
             </Grid>
             <Grid item xs={9}>
                 <Paper className="titulo">
-                    <header>{cvFinal.user.name}</header>
-                    <h1>{cvFinal.user.job}</h1>
+                    <header>{props.cv.name}</header>
+                    <h1>{props.cv.job}</h1>
                 </Paper>
-                    <Summary />
+                    <Summary cv={props.cv}/>
             </Grid>
         </Grid>
     );

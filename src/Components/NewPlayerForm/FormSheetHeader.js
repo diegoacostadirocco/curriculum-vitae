@@ -1,6 +1,6 @@
 import React, {useRef, useState} from "react";
 import {InputCvBorrador, TextAreaCvBorrador} from "../shared/BorradorInputs";
-import {cvBorrador} from "../DataCV";
+import {cvBorrador} from "../../DataCV";
 
 const FormSheetHeader = () => {
     const fotoRef = useRef();
@@ -15,7 +15,7 @@ const FormSheetHeader = () => {
     return (
         <div>
             <div className="fields">
-                {fotoFile && <img src={URL.createObjectURL(fotoFile)}/>}
+                {fotoFile && <img alt="fotoCV"src={URL.createObjectURL(fotoFile)}/>}
                 <div className="required field">
                     <label>Foto CV</label>
                     <input

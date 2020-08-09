@@ -1,8 +1,7 @@
 import React from 'react';
-import {cvFinal} from '../../../DataCV';
 
-const WorkHistory = () => {
-    const listOfWorks = cvFinal.user.trabajos.map(
+const WorkHistory = (props) => {
+    const listOfWorks = props.cv.trabajos.map(
         (trabajo) =>
             <div key={`${trabajo.workPost}_${trabajo.company}`}>
                 <b>{`${trabajo.workPost}`}</b> -<span>{`${trabajo.company}`}</span>

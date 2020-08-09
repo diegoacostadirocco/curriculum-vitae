@@ -1,31 +1,28 @@
 import React from 'react';
-import { FiMail } from 'react-icons/fi';
-import { FcCallback } from 'react-icons/fc';
-import { FaLinkedin } from 'react-icons/fa';
-import { example } from '../../DataCV';
+import {FiMail} from 'react-icons/fi';
+import {FcCallback} from 'react-icons/fc';
+import {FaLinkedin} from 'react-icons/fa';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import './../../../css/footer.css';
 import PropTypes from 'prop-types';
 
-const Contacto = () => {
+const Contacto = (props) => {
 
     return (
         <div className="contacto">
-            <span></span>
-            <Grid container spacing={2}
-                    direction="row">
+            <Grid container spacing={1} direction="row">
                 <Grid item xs>
                     <Paper elevation={2} className="linksDeContacto">
-                        <a href={`mailto: ${example.persona.mail}`} style={{wordWrap:"break-word"}}>
-                            <FiMail />{example.persona.mail}
+                        <a href={`mailto: ${props.cv.mail}`}>
+                            <FiMail/>{props.cv.mail}
                         </a>
                     </Paper>
                 </Grid>
                 <Grid item xs>
                     <Paper elevation={2} className="linksDeContacto">
-                        <a href={`tel:${example.persona.phone}`}>
-                            <FcCallback />{example.persona.phone}
+                        <a href={`tel:${props.cv.phone}`}>
+                            <FcCallback/>{props.cv.phone}
                         </a>
                     </Paper>
                 </Grid>
@@ -34,7 +31,7 @@ const Contacto = () => {
                         <a href="https://www.linkedin.com/in/adrdiegomartin/"
                            target="_blank"
                            rel="noopener noreferrer">
-                            <FaLinkedin />{example.persona.linkedIn}
+                            <FaLinkedin/>{props.cv.linkedIn}
                         </a>
                     </Paper>
                 </Grid>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {BsTrash} from 'react-icons/bs';
 import {InputCvBorrador} from "../shared/BorradorInputs";
-import {cvBorrador} from "../DataCV";
+import {cvBorrador} from "../../DataCV";
 
 const FormSheetJobs = () => {
     const [trabajos, setTrabajos] = useState(cvBorrador.user.trabajos);
@@ -24,7 +24,6 @@ const FormSheetJobs = () => {
                     <div key={`${trabajo} ${i}`} className="fields">
                         <div className="field">
                             <label>Tu ultimo trabajo</label>
-
                             <InputCvBorrador
                                 nombreDelCampo={`trabajos[${i}].workPost`}
                                 placeholder="¿De que trabajas/abas?"

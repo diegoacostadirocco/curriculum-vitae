@@ -1,11 +1,11 @@
-import '../css/newResumeForm.css';
+import './css/newResumeForm.css';
 import React from 'react';
-import FormSheetHeader from './NewPlayerForm/FormSheetHeader';
-import FormSheetStudies from './NewPlayerForm/FormSheetStudies';
-import FormSheetJobs from './NewPlayerForm/FormSheetJobs';
-import FormSheetSkills from './NewPlayerForm/FormSheetSkills';
-import FormSheetContacto from './NewPlayerForm/FormSheetContacto';
-import DownBar from './shared/DownBar';
+import FormSheetHeader from './components/NewPlayerForm/FormSheetHeader';
+import FormSheetStudies from './components/NewPlayerForm/FormSheetStudies';
+import FormSheetJobs from './components/NewPlayerForm/FormSheetJobs';
+import FormSheetSkills from './components/NewPlayerForm/FormSheetSkills';
+import FormSheetContacto from './components/NewPlayerForm/FormSheetContacto';
+import DownBar from './components/shared/DownBar';
 import { cvFinal } from './DataCV';
 import {cvBorrador} from './DataCV';
 
