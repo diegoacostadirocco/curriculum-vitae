@@ -19,7 +19,6 @@ const FormSheetContacto = () => {
           placeholder="numero de contacto"
           nombreDelCampo="phone"
           maxLength="15"
-          type="number"
         />
       </div>
       <div className="field">
