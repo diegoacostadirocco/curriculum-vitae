@@ -12,7 +12,7 @@ const Header = (props) => {
             <Grid item xs={3}
                   className="foto-header">
                 {props.foto && <img className="ui centered image"
-                      src={URL.createObjectURL(props.cv.foto)} alt="fotoCV"/>}
+                      src={URL.createObjectURL(props.cv.foto)} alt="fotoCV" />}
             </Grid>
             <Grid item xs={9}>
                 <Paper className="titulo">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsTrash } from 'react-icons/bs';
 import { cvBorrador } from "../../DataCV";
-import { InputCvBorrador } from "../shared/BorradorInputs";
+import { InputCvBorrador, InputNumericoCvBorrador } from "../shared/BorradorInputs";
 
 const FormSheetSkills = () => {
 
@@ -34,7 +34,7 @@ const FormSheetSkills = () => {
                 <div className="field">
                 <label>Seminario</label>
                 <InputCvBorrador
-                    nombreDelCampo={`expertise[${i}.seminario]`}
+                    nombreDelCampo={`expertise[${i}.seminary]`}
                     maxLength="20"
                     placeholder="Nombre del curso"
                 />
@@ -49,9 +49,8 @@ const FormSheetSkills = () => {
                 </div>
                 <div className="field">
                 <label>Nivel de manejo</label>
-                <InputCvBorrador
+                <InputNumericoCvBorrador
                     nombreDelCampo={`expertise[${i}.stars]`}
-                    type="number"
                     placeholder="1=JR, 5=MASTER"
                     min="1"
                     max="5"

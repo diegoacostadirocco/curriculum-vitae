@@ -1,6 +1,13 @@
+import React from 'react';
+import './icons/fotominicv.jpg';
+const exampleImage = () =>{
+    return(
+        <img src={URL.createObjectURL('./icons/fotominicv.jpg')} alt="fotoCV" />
+    )
+}
 export const example = {
     persona: {
-        foto: undefined ,
+        foto: `${exampleImage}` ,
         sumario: "este es mi sumario profesional",
         name: "Diego Martin Acosta Di Rocco",
         job: "Desarrollador FrontEnd",

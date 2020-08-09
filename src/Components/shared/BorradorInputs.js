@@ -45,3 +45,23 @@ export const TextAreaCvBorrador = (props) => {
         {...rest}
     />
 }
+
+export const InputNumericoCvBorrador = (props) => {
+    const {nombreDelCampo, ...rest} = props;
+
+    const [campo, setCampo] = useState(cvBorrador.user[nombreDelCampo]);
+
+    const handleCampoChange = e => {
+        setCampo(e.target.value);
+        cvBorrador.user[nombreDelCampo] = e.target.value;
+        console.log(e.target.value);
+    };
+
+    return <input
+    type="number"
+    value={campo}
+    onChange={handleCampoChange}
+    maxLength="1"
+    {...rest}
+    />
+}
