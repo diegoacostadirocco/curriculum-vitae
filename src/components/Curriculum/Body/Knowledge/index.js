@@ -21,7 +21,7 @@ const Knowledge = (props) => {
                         <br/>
                         en <p>{`${expertee.school}`}</p>
                          Nivel de manejo:   
-                        <Rating name="read-only" value={expertee.stars} readOnly />
+                        <Rating name="read-only" value={props.cv.expertise.stars} readOnly />
                     </div>
                 </Paper>
             </Grid>

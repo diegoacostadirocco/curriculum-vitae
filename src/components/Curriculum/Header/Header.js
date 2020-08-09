@@ -11,7 +11,7 @@ const Header = (props) => {
         <Grid container spacing={2} direction="row" className="encabezado">
             <Grid item xs={3}
                   className="foto-header">
-                {props.foto && <img className="ui centered image"
+                {props.cv.foto && <img className="ui centered image"
                       src={URL.createObjectURL(props.cv.foto)} alt="fotoCV" />}
             </Grid>
             <Grid item xs={9}>
