@@ -1,65 +1,52 @@
-import React, { useState } from "react";
-import { cvBorrador } from "../DataCV";
+import React, {useRef, useState} from "react";
+import {InputCvBorrador, TextAreaCvBorrador} from "../shared/BorradorInputs";
+import {cvBorrador} from "../DataCV";
 
 const FormSheetHeader = () => {
-  const [name, setName] = useState(cvBorrador.user.name);
+    const fotoRef = useRef();
+    const [fotoFile, setFotoFile] = useState(cvBorrador.user.foto);
 
+    const handleFotoChange = () => {
+        const file = fotoRef.current.files[0]
+        setFotoFile(file)
+        cvBorrador.user.foto = file
+    }
 
-  const handleNameChange = e => {
-    setName(e.target.value);
-    cvBorrador.user.name = e.target.value;
-    console.log(e.target.value);
-  };
-  const handleJobChange = e => {
-    cvBorrador.user.job = e.target.value;
-  };
-  const handleSumarioChange = e => {
-    cvBorrador.user.sumario = e.target.value;
-  };
-  return (
-    <div>
-      <div className="fields">
-        <div className="required field">
-          <label>Foto CV</label>
-          <input type="file" id="userPhoto" name="foto-CV" />
+    return (
+        <div>
+            <div className="fields">
+                {fotoFile && <img src={URL.createObjectURL(fotoFile)}/>}
+                <div className="required field">
+                    <label>Foto CV</label>
+                    <input
+                        accept="image/*"
+                        type="file" id="userPhoto" name="foto-CV" ref={fotoRef}
+                        onChange={handleFotoChange}
+                    />
+                </div>
+                <div className="required field">
+                    <label>Nombre Completo</label>
+                    <InputCvBorrador
+                        placeholder="Nombre completo"
+                        nombreDelCampo="name"/>
+                </div>
+                <div className="required field">
+                    <label>Trabajo</label>
+                    <InputCvBorrador
+                        placeholder="¿A que te dedicas?"
+                        maxLength="150"
+                        nombreDelCampo="job"/>
+
+                </div>
+            </div>
+            <div className="ui form">
+                <div className="required field">
+                    <label>Sumario Profesional</label>
+                    <TextAreaCvBorrador nombreDelCampo="sumario"/>
+                </div>
+            </div>
         </div>
-        <div className="required field">
-          <label>Nombre Completo</label>
-          <input
-            name="name"
-            type="text"
-            placeholder="Nombre completo"
-            value={name}
-            onChange={handleNameChange}
-            maxLength="100"
-          />
-        </div>
-        <div className="required field">
-          <label>Trabajo</label>
-          <input
-            type="text"
-            placeholder="¿A que te dedicas?"
-            onChange={handleJobChange}
-            maxLength="150"
-            name="job"
-          />
-        </div>
-      </div>
-      <div className="ui form">
-        <div className="required field">
-          <label>Sumario Profesional</label>
-          <textarea
-              name="sumario"
-              rows="3"
-              type="text"
-              placeholder="..."
-              onChange={handleSumarioChange}
-              style={{resize:"none"}}
-            />
-        </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default FormSheetHeader;

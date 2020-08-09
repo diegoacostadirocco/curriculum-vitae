@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Footer from './userResume/Footer/Footer'
 import Header from './userResume/Header/Header';
 import Body from './userResume/Body/index';
-import DownBar from './constants/DownBar';
+import DownBar from './shared/DownBar';
 
 
 const ExampleCV = () => {

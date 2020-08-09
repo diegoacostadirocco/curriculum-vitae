@@ -2,7 +2,7 @@ import React from 'react';
 import '../../css/home.css';
 import { Link }from 'react-router-dom';
 import PieDePagina from './PieDePagina';
-import DownBar from '../constants/DownBar';
+import DownBar from '../shared/DownBar';
 
 const Home = () => {
     return (

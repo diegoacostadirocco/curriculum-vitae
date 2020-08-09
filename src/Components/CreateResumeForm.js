@@ -5,7 +5,7 @@ import FormSheetStudies from './NewPlayerForm/FormSheetStudies';
 import FormSheetJobs from './NewPlayerForm/FormSheetJobs';
 import FormSheetSkills from './NewPlayerForm/FormSheetSkills';
 import FormSheetContacto from './NewPlayerForm/FormSheetContacto';
-import DownBar from './constants/DownBar';
+import DownBar from './shared/DownBar';
 import { cvFinal } from './DataCV';
 import {cvBorrador} from './DataCV';
 

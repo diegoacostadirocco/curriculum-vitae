@@ -109,6 +109,7 @@ export let cvFinal = {
 }
 export let cvBorrador = {
     user: {
+        foto: undefined,
         sumario: "",
         name: "",
         job: "",

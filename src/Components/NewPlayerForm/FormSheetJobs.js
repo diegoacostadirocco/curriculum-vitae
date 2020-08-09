@@ -1,77 +1,68 @@
-import React, { useState } from "react";
-import { BsTrash } from 'react-icons/bs';
+import React, {useState} from "react";
+import {BsTrash} from 'react-icons/bs';
+import {InputCvBorrador} from "../shared/BorradorInputs";
+import {cvBorrador} from "../DataCV";
 
 const FormSheetJobs = () => {
+    const [trabajos, setTrabajos] = useState(cvBorrador.user.trabajos);
 
-  const [trabajos, setTrabajos] = useState([
-    { workPost: "", company: "", lastDate: "" }
-  ]);
+    const handleRemoveClick = index => {
+        const work = [...trabajos];
+        work.splice(index, 1);
+        cvBorrador.user.trabajos = work
+        setTrabajos(work);
+    };
+    const handleAddClick = () => {
+        const nuevosTrabajos = [...trabajos, {workPost: "", company: "", lastDate: ""}]
+        cvBorrador.user.trabajos = nuevosTrabajos
+        setTrabajos(nuevosTrabajos);
+    };
+    return (
+        <div>
+            {trabajos.map((trabajo, i) => {
+                return (
+                    <div key={`${trabajo} ${i}`} className="fields">
+                        <div className="field">
+                            <label>Tu ultimo trabajo</label>
 
-  const handleInputChange = (e, index) => {
-    const { name, value } = e.target;
-    const work = [...trabajos];
-    work[index][name] = value;
-    setTrabajos(work);
-    console.log({trabajos});
-  };
-  const handleRemoveClick = index => {
-    const work = [...trabajos];
-    work.splice(index, 1);
-    setTrabajos(work);
-  };
-  const handleAddClick = () => {
-    setTrabajos([...trabajos, { workPost: "", company: "", lastDate: "" }]);
-  };
-  return (
-    <div>
-    {trabajos.map((x, i) => {
-        return(
-        <div key={`${x} ${i}`} className="fields">
-            <div className="field">
-            <label>Tu ultimo trabajo</label>
-            <input
-                name="workPost"
-                type="text"
-                placeholder="¿De que trabajas/abas?"
-                onChange={e => handleInputChange(e, i)}
-                maxLength="30"
-            />
-            </div>
-            <div className="field">
-            <label>Empresa</label>
-            <input
-                name="company"
-                type="text"
-                placeholder="¿Donde?"
-                onChange={e => handleInputChange(e, i)}
-                maxLength="30"
-            />
-            </div>
-            <div className="field">
-            <label>Fecha de finalizacion</label>
-            <input
-                type="text"
-                name="lastDate"
-                placeholder="MM-YYYY"
-                onChange={e => handleInputChange(e, i)}
-                className="number-input"
-                maxLength="7"
-            />
-            </div>
-            <div style={{textAlign:"center"}}>
-              {trabajos.length !== 1 && (
-                <button className="ui button" onClick={() => handleRemoveClick(i)}>
-                  <BsTrash />
-                </button>
-              )}
-              {trabajos.length - 1 === i && (
-              <button style={{margin:"5px"}}className="ui button" onClick={handleAddClick}>
-              Agregar Trabajo
-                </button>
-              )}
-        </div> 
-      </div>
-        )})}
-    </div>)
+                            <InputCvBorrador
+                                nombreDelCampo={`trabajos[${i}].workPost`}
+                                placeholder="¿De que trabajas/abas?"
+                                maxLength="30"
+                            />
+                        </div>
+                        <div className="field">
+                            <label>Empresa</label>
+                            <InputCvBorrador
+                                nombreDelCampo={`trabajos[${i}].company`}
+                                placeholder="¿Donde?"
+                                maxLength="30"
+                            />
+                        </div>
+                        <div className="field">
+                            <label>Fecha de finalizacion</label>
+                            <InputCvBorrador
+                                nombreDelCampo={`trabajos[${i}].lastDate`}
+                                placeholder="MM-YYYY"
+                                maxLength="7"
+                                className="number-input"
+                            />
+                        </div>
+                        <div style={{textAlign: "center"}}>
+                            {trabajos.length !== 1 && (
+                                <button className="ui button" onClick={() => handleRemoveClick(i)}>
+                                    <BsTrash/>
+                                </button>
+                            )}
+                            {trabajos.length - 1 === i && (
+                                <button style={{margin: "5px"}} className="ui button" onClick={handleAddClick}>
+                                    Agregar Trabajo
+                                </button>
+                            )}
+                        </div>
+                    </div>
+                )
+            })}
+        </div>)
 }
 export default FormSheetJobs;
