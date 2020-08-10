@@ -1,6 +1,6 @@
 
 export const example = {
-    persona: {
+    user: {
         sumario: "este es mi sumario profesional",
         name: "Diego Martin Acosta Di Rocco",
         job: "Desarrollador FrontEnd",

@@ -17,7 +17,7 @@ const App = () => {
                 <Switch>
                  <Route path ="/" exact component= {Home} />
                  <Route path ="/create-resume" component= {CreateResumeForm} /> 
-                 <Route path ="/example-resume"  render= {() =><CurriculumBase cv={example.persona} />} />
+                 <Route path ="/example-resume"  render= {() =><CurriculumBase cv={example.user} />} />
                  <Route path ="/user-resume" render= {() =><CurriculumBase cv={cvFinal.user} />} /> 
                 </Switch>
             </div>
