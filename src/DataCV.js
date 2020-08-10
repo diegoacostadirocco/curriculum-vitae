@@ -89,7 +89,7 @@ export let cvFinal = {
             {
                 workPost: "ex-trabajo",
                 company: "ex-compania",
-                endDate: undefined,
+                endDate: "",
             },
         ],
         estudios: [
@@ -104,7 +104,7 @@ export let cvFinal = {
                 skill: "aptitud",
                 seminary: '"seminario"',
                 school: "escuela/portal",
-                stars: undefined,
+                stars: "",
             },
         ],
     },
@@ -121,7 +121,7 @@ export let cvBorrador = {
             {
                 workPost: "",
                 company: "",
-                endDate: undefined,
+                endDate: "",
             },
         ],
         estudios: [
@@ -136,7 +136,7 @@ export let cvBorrador = {
                 skill: "",
                 seminary: "",
                 school: "",
-                stars: null,
+                stars: "",
             },
         ],
     },

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsTrash } from 'react-icons/bs';
 import { cvBorrador } from "../../DataCV";
-import { InputCvBorrador, InputNumericoCvBorrador } from "../shared/BorradorInputs";
+import { InputCvBorrador } from "../shared/BorradorInputs";
 
 const FormSheetSkills = () => {
 
@@ -49,7 +49,7 @@ const FormSheetSkills = () => {
                 </div>
                 <div className="field">
                 <label>Nivel de manejo</label>
-                <InputNumericoCvBorrador
+                <InputCvBorrador
                     nombreDelCampo={`expertise[${i}.stars]`}
                     placeholder="1=JR, 5=MASTER"
                     min="1"

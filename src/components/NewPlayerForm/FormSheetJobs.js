@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {BsTrash} from 'react-icons/bs';
-import {InputCvBorrador, InputNumericoCvBorrador} from "../shared/BorradorInputs";
+import {InputCvBorrador} from "../shared/BorradorInputs";
 import {cvBorrador} from "../../DataCV";
 
 const FormSheetJobs = () => {
@@ -40,7 +40,7 @@ const FormSheetJobs = () => {
                         </div>
                         <div className="field">
                             <label>Fecha de finalizacion</label>
-                            <InputNumericoCvBorrador
+                            <InputCvBorrador
                                 nombreDelCampo={`trabajos[${i}].lastDate`}
                                 placeholder="MM-YYYY"
                                 maxLength="7"
