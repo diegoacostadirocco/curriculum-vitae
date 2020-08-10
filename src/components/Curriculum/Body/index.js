@@ -13,7 +13,7 @@ const Body = (props) => {
                   direction="column">
                 <Grid item xs>
                     <Paper elevation={2}>
-                        <Knowledge cv={props.cv}   />
+                        <Knowledge cv={props.cv} stars={props.cv.expertise.stars} />
                     </Paper>
                 </Grid>
                 <br/>

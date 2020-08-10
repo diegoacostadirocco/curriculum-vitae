@@ -5,6 +5,7 @@ const WorkHistory = (props) => {
         (trabajo) =>
             <div key={`${trabajo.workPost}_${trabajo.company}`}>
                 <b>{`${trabajo.workPost}`}</b> -<span>{`${trabajo.company}`}</span>
+                 Fecha de finalizacion:<span>{`${trabajo.endDate}`}</span>
                 <br/>
             </div>);
     return (

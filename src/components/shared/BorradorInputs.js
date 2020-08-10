@@ -59,9 +59,8 @@ export const InputNumericoCvBorrador = (props) => {
 
     return <input
     type="number"
-    value={campo}
+    value={campo || "" }
     onChange={handleCampoChange}
-    maxLength="1"
     {...rest}
     />
 }

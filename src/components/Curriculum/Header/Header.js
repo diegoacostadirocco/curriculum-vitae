@@ -5,7 +5,7 @@ import { Paper } from '@material-ui/core';
 import Summary from './Summary';
 
 const Header = (props) => {
-    console.log(props.cv.foto);
+    console.log(props.foto);
 
     return (
         <Grid container spacing={2} direction="row" className="encabezado">

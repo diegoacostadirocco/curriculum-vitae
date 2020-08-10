@@ -5,22 +5,21 @@ import Header from './Header/Header';
 import Body from './Body/index';
 import DownBar from '../shared/DownBar';
 
-
-const CurriculumBase = ({cv}) => {
+const CurriculumBase = (props) => {
     return (
         <div>
             <div className="ui container new-resume-form">
                 <Grid container spacing={3}>
                     <Grid item xs={12}></Grid>
-                        <Header cv={cv} />
+                        <Header cv={props.cv} foto={props.cv.foto}/>
                     </Grid>
                     <br/>
                     <br/>
                     <Grid item xs={12}>
-                         <Body cv={cv} />
+                         <Body cv={props.cv} />
                     </Grid>
                     <Grid item xs={12}>
-                        <Footer cv={cv}/>
+                        <Footer cv={props.cv}/>
                 </Grid>
             </div>
             <DownBar />

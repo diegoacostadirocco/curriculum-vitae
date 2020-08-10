@@ -18,6 +18,7 @@ const Home = () => {
                 <br/>
                 <PieDePagina />
             </div>
+            <br/>
             <DownBar />
 
        </div>

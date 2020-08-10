@@ -1,13 +1,6 @@
-import React from 'react';
-import './icons/fotominicv.jpg';
-const exampleImage = () =>{
-    return(
-        <img src={URL.createObjectURL('./icons/fotominicv.jpg')} alt="fotoCV" />
-    )
-}
+
 export const example = {
     persona: {
-        foto: `${exampleImage}` ,
         sumario: "este es mi sumario profesional",
         name: "Diego Martin Acosta Di Rocco",
         job: "Desarrollador FrontEnd",
@@ -86,7 +79,6 @@ export const example = {
 }
 export let cvFinal = {
     user: {
-        foto: undefined ,
         sumario: "este es sumario",
         name: "Nombre Completo",
         job: "Profesion",
@@ -97,6 +89,7 @@ export let cvFinal = {
             {
                 workPost: "ex-trabajo",
                 company: "ex-compania",
+                endDate: undefined,
             },
         ],
         estudios: [
@@ -111,14 +104,13 @@ export let cvFinal = {
                 skill: "aptitud",
                 seminary: '"seminario"',
                 school: "escuela/portal",
-                stars: 5,
+                stars: undefined,
             },
         ],
     },
 }
 export let cvBorrador = {
     user: {
-        foto: undefined,
         sumario: "",
         name: "",
         job: "",
@@ -129,6 +121,7 @@ export let cvBorrador = {
             {
                 workPost: "",
                 company: "",
+                endDate: undefined,
             },
         ],
         estudios: [
@@ -141,9 +134,9 @@ export let cvBorrador = {
         expertise: [
             {
                 skill: "",
-                seminary: '""',
+                seminary: "",
                 school: "",
-                stars: undefined,
+                stars: null,
             },
         ],
     },

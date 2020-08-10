@@ -7,9 +7,9 @@ const FormSheetHeader = () => {
     const [fotoFile, setFotoFile] = useState(cvBorrador.user.foto);
 
     const handleFotoChange = () => {
-        const file = fotoRef.current.files[0]
-        setFotoFile(file)
-        cvBorrador.user.foto = file
+        const file = fotoRef.current.files[0];
+        setFotoFile(file);
+        cvBorrador.user.foto = file;
     }
 
     return (

@@ -1,6 +1,7 @@
 .footer-sign{
         background-color: #212121;
-        position: sticky bottom;
+        position: absolute bottom;
+        bottom: 0;
         left: 0;
         width: 100%;
         padding: 15px 0;
