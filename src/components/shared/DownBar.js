@@ -1,5 +1,6 @@
 import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
+import ShareButtons from './ShareButtons';
 
 const DownBar = () => {
     return (
@@ -10,6 +11,7 @@ const DownBar = () => {
                  https://github.com/diegoacostadirocco
               </span>
             </a>
+        <ShareButtons />
         </div>
     );
 };
