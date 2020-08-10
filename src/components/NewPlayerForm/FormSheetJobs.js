@@ -41,7 +41,7 @@ const FormSheetJobs = () => {
                         <div className="field">
                             <label>Fecha de finalizacion</label>
                             <InputCvBorrador
-                                nombreDelCampo={`trabajos[${i}].lastDate`}
+                                nombreDelCampo={`trabajos[${i}].endDate`}
                                 placeholder="MM-YYYY"
                             />
                         </div>
