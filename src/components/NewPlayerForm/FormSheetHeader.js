@@ -15,7 +15,9 @@ const FormSheetHeader = () => {
     return (
         <div>
             <div className="fields">
-                {fotoFile && <img alt="fotoCV"src={URL.createObjectURL(fotoFile)}/>}
+                {fotoFile && 
+                    <img className="ui big centered image" style={{width:"25%", height:"25%"}}
+                         alt="fotoCV"src={URL.createObjectURL(fotoFile)}/>}
                 <div className="required field">
                     <label>Foto CV</label>
                     <input

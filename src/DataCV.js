@@ -11,22 +11,22 @@ export const example = {
             {
                 workPost: "Vendedor de paquetes turisticos",
                 company: "Flecha Turismo Estudiantil S.A.",
-                endDate: "presente",
+                endDate: "",
             },
             {
                 workPost: "Operador telefonico",
                 company: "Activo S.A.",
-                endDate: "02-2020",
+                endDate: "",
             },
             {
                 workPost: "Administrativo",
                 company: "Flecha Bus Viajes SRL",
-                endDate: "12-2019",
+                endDate: "",
             },
             {
                 workPost: "Atencion al cliente",
                 company: "La Brujula, estudio de musica",
-                endDate: "03-2012",
+                endDate: "",
             },
         ],
         estudios: [
