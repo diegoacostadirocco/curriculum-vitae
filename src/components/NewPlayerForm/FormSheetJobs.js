@@ -43,8 +43,6 @@ const FormSheetJobs = () => {
                             <InputCvBorrador
                                 nombreDelCampo={`trabajos[${i}].lastDate`}
                                 placeholder="MM-YYYY"
-                                maxLength="7"
-                                className="number-input"
                             />
                         </div>
                         <div style={{textAlign: "center"}}>

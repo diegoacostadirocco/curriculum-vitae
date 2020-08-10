@@ -18,6 +18,7 @@ const CurriculumBase = (props) => {
                     <Grid item xs={12}>
                          <Body cv={props.cv} />
                     </Grid>
+                    <br/>
                     <Grid item xs={12}>
                         <Footer cv={props.cv}/>
                 </Grid>

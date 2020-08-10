@@ -10,7 +10,7 @@ const Body = (props) => {
     return (
         <div id="body">
             <Grid container spacing={2}
-                  direction="column">
+                  direction="row">
                 <Grid item xs>
                     <Paper elevation={2}>
                         <Knowledge cv={props.cv} stars={props.cv.expertise.stars} />

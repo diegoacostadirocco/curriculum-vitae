@@ -46,21 +46,21 @@ export const TextAreaCvBorrador = (props) => {
     />
 }
 
-export const InputNumericoCvBorrador = (props) => {
-    const {nombreDelCampo, ...rest} = props;
+// export const InputNumericoCvBorrador = (props) => {
+//     const {nombreDelCampo, ...rest} = props;
 
-    const [campo, setCampo] = useState(cvBorrador.user[nombreDelCampo]);
+//     const [campo, setCampo] = useState(cvBorrador.user[nombreDelCampo]);
 
-    const handleCampoChange = e => {
-        setCampo(e.target.value);
-        cvBorrador.user[nombreDelCampo] = e.target.value;
-        console.log(e.target.value);
-    };
+//     const handleCampoChange = e => {
+//         setCampo(e.target.value);
+//         cvBorrador.user[nombreDelCampo] = e.target.value;
+//         console.log(e.target.value);
+//     };
 
-    return <input
-    type="number"
-    value={campo || "" }
-    onChange={handleCampoChange}
-    {...rest}
-    />
-}
+//     return <input
+//     type="number"
+//     value={campo || "" }
+//     onChange={handleCampoChange}
+//     {...rest}
+//     />
+// }

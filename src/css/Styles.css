@@ -9,4 +9,5 @@ padding: 5px;
     background-repeat: no-repeat;
     background-size:auto; 
     height: 100%;
+    word-wrap: break-word; 
 }

@@ -12,7 +12,7 @@ const Knowledge = (props) => {
             <Grid item xs key={`${expertee.skill}
             _${expertee.seminary}_${expertee.school}
             _${expertee.stars}`}>
-                <Paper elevation={5}>
+                <Paper elevation={2}>
                     <div 
                         className="skill" >
                         <b>{`${expertee.skill}`}</b>
@@ -21,7 +21,7 @@ const Knowledge = (props) => {
                         <br/>
                         en <p>{`${expertee.school}`}</p>
                          Nivel de manejo:   
-                        <Rating name="read-only" value={expertee.stars} readOnly />
+                        <Rating name="read-only" value={parseInt(`${expertee.stars}`)} readOnly />
                     </div>
                 </Paper>
             </Grid>
