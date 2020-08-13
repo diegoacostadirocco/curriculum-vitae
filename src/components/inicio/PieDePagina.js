@@ -15,7 +15,7 @@ const PieDePagina = () => {
             <Grid container spacing={2} className="listOfUsed">
                 <Grid item xs>
                     <Paper elevation={2}>
-                        <GrCss3/><span>CSS3</span>
+                        <GrCss3 color="primary"/><span>CSS3</span>
                     </Paper>
                 </Grid>
                 <br/>
@@ -26,9 +26,11 @@ const PieDePagina = () => {
                 </Grid>
                 <Grid item xs>
                     <Paper elevation={2}>
-                    <FaReact/><span>React icons</span> 
+                        <FaReact/><span>React icons</span> 
                     </Paper>
                 </Grid>
+            </Grid>
+            <Grid container spacing={2} className="listOfUsed">
                 <Grid item xs>
                     <Paper elevation={2}>
                         <MdRouter/><span>React Router</span> 
@@ -36,49 +38,15 @@ const PieDePagina = () => {
                 </Grid>
                 <Grid item xs>
                     <Paper elevation={2}>
-                    <span>S. Semantic UI</span>
+                        <span>S. Semantic UI</span>
                     </Paper>
                 </Grid>
                 <Grid item xs>
                     <Paper elevation={2}>
-                        <img src={Icon} alt="materialui-icon"/><span>Material UI</span> 
+                        <img src={Icon} alt="materialui-icon"/><span> Material UI</span> 
                     </Paper>
                 </Grid>  
             </Grid>
-
-        
-            {/* <div className="ui grid container listOfUsed">
-                <div className="four wide column">
-                    <Paper elevation={3}>
-                        <GrCss3/><span>CSS3</span>
-                    </Paper>
-                </div>
-                <div className="four wide column">
-                    <Paper elevation={3}>
-                        <li><GrReactjs/> ReactJS</li>
-                    </Paper>
-                </div>
-                <div className="four wide column">
-                    <Paper elevation={3}>
-                        <li><FaReact/> React-Icons</li>
-                    </Paper>
-                </div>
-                <div className="four wide column">
-                    <Paper elevation={3}>
-                        <li><MdRouter/> React-Router</li>
-                    </Paper>
-                </div>
-                <div className="four wide column">
-                    <Paper elevation={3}>
-                        <li>S. Semantic UI</li>
-                    </Paper>
-                </div>
-                <div className="four wide column">
-                    <Paper elevation={3}>
-                        <li><img src={Icon} alt="materialui-icon"/> Material-UI </li>
-                    </Paper>
-                </div>
-            </div>    */}
         </div>
     );
 };

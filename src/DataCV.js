@@ -4,8 +4,8 @@ export const example = {
         sumario: "este es mi sumario profesional",
         name: "Diego Martin Acosta Di Rocco",
         job: "Desarrollador FrontEnd",
-        mail: "diegoacostadirocco@gmail.com",
-        phone: "11-6668-0550",
+        mail: "mail@mailto.com",
+        phone: "11-0000-2222",
         linkedIn: `Diego Acosta`,
         trabajos: [
             {

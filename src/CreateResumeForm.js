@@ -1,5 +1,6 @@
 import './css/newResumeForm.css';
 import React from 'react';
+import {Redirect} from 'react-router-dom';
 import FormSheetHeader from './components/NewPlayerForm/FormSheetHeader';
 import FormSheetStudies from './components/NewPlayerForm/FormSheetStudies';
 import FormSheetJobs from './components/NewPlayerForm/FormSheetJobs';
@@ -14,6 +15,9 @@ const CreateResumeForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         cvFinal.user = cvBorrador.user;
+        window.alert("Cargado con exito! Accede a TU CV para ver el resultado");
+        // window.location.href='/user-resume';
+        return(<Redirect push to="/user-resume" />);
     }
 
     return (
